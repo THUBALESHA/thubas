@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Thubalesha Cash Loan</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f7f9fc; padding:20px; }
+    header { display:flex; align-items:center; margin-bottom:20px; }
+    header img { height:60px; margin-right:15px; }
+    h1 { color:#004080; }
+    .nav { background:#004080; padding:10px; border-radius:8px; margin-bottom:20px; }
+    .nav a { color:white; text-decoration:none; margin:0 15px; font-weight:bold; }
+    .nav a:hover { background:#0066cc; padding:6px 12px; border-radius:5px; }
+    .contact-box { background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 6px #ccc; max-width:600px; margin:auto; }
+    label { display:block; margin-top:10px; }
+    input, textarea { width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:5px; }
+    button { margin-top:15px; padding:10px 20px; background:#004080; color:white; border:none; border-radius:5px; cursor:pointer; }
+    footer { margin-top:30px; text-align:center; font-size:14px; color:#444; }
+    footer a { color:#004080; text-decoration:none; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("MAz2iorQdsu62nPTr");
+    })();
+
+    function sendMessage(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_xdj3o94', 'template_rakkobj', e.target)
+        .then(() => {
+          alert("Your message has been sent successfully!");
+        }, (error) => {
+          alert("Failed to send: " + JSON.stringify(error));
+        });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="thubaf.jpg" alt="Logo">
+    <h1>Contact Us</h1>
+  </header>
+
+  <div class="nav">
+    <a href="index.html">Calculator</a>
+    <a href="contract_form.html">Application Contract</a>
+    <a href="terms_form.html">Terms & Conditions</a>
+    <a href="comment_form.html">Comments</a>
+    <a href="bank_form.html">Banking Info</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <div class="contact-box">
+    <form onsubmit="sendMessage(event)">
+      <label>Name: <input type="text" name="contact_name" required></label>
+      <label>Email: <input type="email" name="contact_email" required></label>
+      <label>Message: <textarea name="contact_message" rows="5" required></textarea></label>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top:20px; text-align:center;">
+      📧 Email: <a href="mailto:thubalesha0001@gmail.com">thubalesha0001@gmail.com</a><br>
+      📱 WhatsApp: <a href="https://wa.me/27787102337" target="_blank">078
